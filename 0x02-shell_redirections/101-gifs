@@ -1,2 +1,2 @@
 #!/bin/bash
-ls -lRa | find -name '*.gif' -type f | rev | cut -d '/' -f1 | cut -d '.' -f2 | rev 
+find -name '*.gif' -type f | rev | cut -d '/' -f 1 | cut -c 1-4 --complement | rev | sort -f
