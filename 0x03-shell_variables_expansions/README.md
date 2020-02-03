@@ -1,4 +1,4 @@
-0. creates an alias
+0. creates an alias with name `ls` and value `rm *`
 1. prints `hello user`, where user is the current Linux user
 2. adds `/action` to the `PATH`
    * `/action` should be the last directory the shell looks into when looking for a program
