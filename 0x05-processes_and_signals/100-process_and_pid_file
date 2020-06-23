@@ -1,4 +1,10 @@
 #!/usr/bin/env bash
+#creates the file /var/run/holbertonscript.pid
+#displays To infinity and beyond indefinitely
+#displays I hate the kill command when receiving a SIGTERM signal
+#displays Y U no love me?! when receiving a SIGINT signal
+#deletes the file /var/run/holbertonscript.pid and
+#terminates itself when receiving a SIGQUIT or SIGTERM signal
 trap 'echo Y U no love me?!' SIGINT
 trap 'rm $file; exit' SIGQUIT
 trap 'echo I hate the kill command; rm $file; exit' SIGTERM
