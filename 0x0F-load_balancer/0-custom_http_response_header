@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+# configures Nginx so that its HTTP response contain a custom header
+sudo apt-get update
+sudo apt-get -y install nginx
+sudo ufw allow 'Nginx HTTP'
+sudo sed -i '/listen 80 default_server/a add_header X-Served-By \"\$HOSTNAME\";' /etc/nginx/sites-available/default
+sudo service nginx reload
