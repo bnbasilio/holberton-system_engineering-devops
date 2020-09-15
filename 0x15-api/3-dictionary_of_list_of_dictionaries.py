@@ -13,7 +13,7 @@ if __name__ == "__main__":
             'https://jsonplaceholder.typicode.com/todos?userId={}'
             .format(user.get('id')))
         tasks = [{"task": _.get('title'), "completed": _.get('completed'),
-                "username": user.get('username')} for _ in data.json()]
+                  "username": user.get('username')} for _ in data.json()]
         output[user.get('id')] = tasks
 
     with open('todo_all_employees.json', 'w') as outfile:
