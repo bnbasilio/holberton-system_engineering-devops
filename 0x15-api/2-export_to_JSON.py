@@ -19,9 +19,9 @@ if __name__ == "__main__":
     data = {}
     tasks = []
     for item in jsonResponse:
-        tasks.append([{"task": item["title"],
+        tasks.append({"task": item["title"],
                        "completed": item["completed"],
-                       "username": USERNAME}])
+                       "username": USERNAME})
     data = {argv[1]: tasks}
 
     with open("{}.json".format(argv[1]), 'w') as data_file:
