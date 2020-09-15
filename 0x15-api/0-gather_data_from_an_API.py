@@ -18,7 +18,7 @@ if __name__ == "__main__":
     NUMBER_OF_DONE_TASKS = 0
     TOTAL_NUMBER_OF_TASKS = 0
     for task in jsonResponse:
-        NUMBER_OF_DONE_TASKS += 1
+        TOTAL_NUMBER_OF_TASKS += 1
         if task["completed"]:
             NUMBER_OF_DONE_TASKS += 1
 
