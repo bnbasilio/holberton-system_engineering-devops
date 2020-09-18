@@ -8,7 +8,6 @@ def number_of_subscribers(subreddit):
                        headers={'User-Agent': 'bnbasilio-app'})
     try:
         jsonResponse = res.json()
-        print (jsonResponse)
         return jsonResponse["data"]["subscribers"]
     except:
         return 0
